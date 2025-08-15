@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>سلة التسوق</title>
+
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="assets/images/trolley.png"
+      type="image/x-icon"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/cart.css" />
+  </head>
+
+  <body>
+    <!-- Toast Notifications -->
+    <div id="toast" class="toast"></div>
+
+    <!-- Confirm Clear Cart Toast -->
+    <div id="toast-confirm" class="toast-confirm hidden">
+      <p>هل تريد مسح كل المنتجات من السلة؟</p>
+      <div class="toast-confirm-buttons">
+        <button id="confirm-yes" class="btn btn-primary">نعم</button>
+        <button id="confirm-no" class="btn btn-secondary">لا</button>
+      </div>
+    </div>
+
+    <!-- Header Section (same as main page) -->
+    <header class="header">
+      <div class="container header-container">
+        <!-- Logo -->
+        <a href="./index.html">
+          <div class="logo">ميم</div>
+        </a>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="menu-toggle" aria-label="Navigation Menu">
+          <i class="fa fa-bars"></i>
+        </button>
+
+        <!-- Navigation Links -->
+        <nav class="nav">
+          <ul id="nav-links">
+            <!-- Dynamic links will appear here -->
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Cart Section -->
+    <section class="cart-section">
+      <div class="container">
+        <!-- Cart Items -->
+        <div id="cart-items"></div>
+
+        <!-- Cart Summary -->
+        <div id="cart-summary"></div>
+
+        <!-- Clear Cart Button -->
+        <button id="clear-cart" class="btn btn-primary" style="display: none">
+          مسح السلة
+        </button>
+
+        <!-- Checkout Button -->
+        <a href="checkout.html" class="checkout-btn">إتمام الشراء</a>
+      </div>
+    </section>
+
+    <!-- JavaScript Files -->
+    <script src="assets/js/products.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/cart.js"></script>
+    <script src="assets/js/data.js"></script>
+  </body>
+</html>

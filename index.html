@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home Page</title>
+
+    <!-- Site Favicon -->
+    <link
+      rel="shortcut icon"
+      href="./assets/images/shopping.png"
+      type="image/x-icon"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+
+  <body>
+    <!-- Header Section -->
+    <header class="header">
+      <div class="container header-container">
+        <!-- Site Logo -->
+        <a href="#"><div class="logo">ميم</div></a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="menu-toggle" aria-label="Navigation Menu">
+          <i class="fa fa-bars"></i>
+        </button>
+
+        <!-- Navigation Links -->
+        <nav class="nav">
+          <ul id="nav-links">
+            <!-- Dynamic links will appear via JS -->
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container hero-content">
+        <h1>أفضل المنتجات بأفضل الأسعار</h1>
+        <p>تسوق الآن وتمتع بالعروض الحصرية والخدمة الممتازة</p>
+        <a href="products.html" class="btn btn-primary">تسوق الآن</a>
+      </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="featured-products">
+      <div class="container">
+        <h2>عروض مميزة</h2>
+        <div class="products-grid" id="featured-products">
+          <!-- Products will appear here via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+      <div class="container">
+        <h2>لماذا تختارنا؟</h2>
+        <div class="features-grid">
+          <div class="feature-item">
+            <i class="fa-solid fa-truck-fast"></i>
+            <h3>توصيل سريع</h3>
+            <p>نوصل طلباتك في أسرع وقت ممكن لأي مكان.</p>
+          </div>
+          <div class="feature-item">
+            <i class="fa-solid fa-shield-halved"></i>
+            <h3>دفع آمن</h3>
+            <p>معاملاتك المالية محمية بأحدث أنظمة الأمان.</p>
+          </div>
+          <div class="feature-item">
+            <i class="fa-solid fa-tags"></i>
+            <h3>أفضل الأسعار</h3>
+            <p>نضمن لك أسعار تنافسية وعروض مميزة.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+      <div class="container">
+        <h2>آراء عملائنا</h2>
+        <div class="testimonials-grid">
+          <div class="testimonial-item">
+            <p>"خدمة ممتازة ومنتجات عالية الجودة. أنصح الجميع."</p>
+            <span>- أحمد محمد</span>
+          </div>
+          <div class="testimonial-item">
+            <p>"وصل الطلب بسرعة والتعبئة كانت رائعة!"</p>
+            <span>- سارة علي</span>
+          </div>
+          <div class="testimonial-item">
+            <p>"أفضل تجربة تسوق أونلاين جربتها على الإطلاق."</p>
+            <span>- محمد خالد</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+      <div class="container">
+        <h2>اشترك في النشرة البريدية</h2>
+        <p>كن أول من يعرف عن العروض والمنتجات الجديدة.</p>
+        <form>
+          <input type="email" placeholder="أدخل بريدك الإلكتروني" required />
+          <button type="submit" class="btn btn-primary">اشترك الآن</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="container footer-container">
+        <p>© 2025 ميم. كل الحقوق محفوظة.</p>
+        <div class="social-icons">
+          <a
+            href="https://www.facebook.com/profile.php?id=100034763891165&mibextid=2JQ9oc"
+            target="_blank"
+            aria-label="Facebook"
+            ><i class="fa-brands fa-facebook-f"></i
+          ></a>
+          <a
+            href="https://github.com/hhaamed74"
+            target="_blank"
+            aria-label="GitHub"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a
+            href="www.linkedin.com/in/hamedabdulmohsen"
+            target="_blank"
+            aria-label="LinkedIn"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <!-- JavaScript Files -->
+    <script src="assets/js/products.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/data.js"></script>
+  </body>
+</html>

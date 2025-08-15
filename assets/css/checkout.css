@@ -1,0 +1,225 @@
+/* Checkout container */
+.checkout-container {
+  display: flex; /* enable flex layout */
+  max-width: 120rem; /* 1200px max width */
+  margin: 5rem auto; /* 50px top/bottom, center horizontally */
+  gap: 2rem; /* 20px gap between form and summary */
+}
+
+/* Checkout form and summary */
+.checkout-form,
+.checkout-summary {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem; /* 20px padding */
+  border-radius: 1.5rem; /* 15px */
+  flex: 1; /* equal width */
+}
+
+/* Headings */
+h2 {
+  margin-bottom: 1.5rem; /* 15px */
+  border-bottom: 0.2rem solid rgba(255, 255, 255, 0.2); /* 2px */
+  padding-bottom: 0.5rem; /* 5px */
+  font-size: 2rem; /* 20px */
+}
+
+/* Labels */
+label {
+  display: block;
+  margin-top: 1rem; /* 10px */
+  margin-bottom: 0.5rem; /* 5px */
+  font-size: 1.4rem; /* 14px */
+}
+
+/* Form elements */
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 1rem; /* 10px */
+  border: none;
+  border-radius: 0.8rem; /* 8px */
+  margin-bottom: 1.5rem; /* 15px */
+}
+
+textarea {
+  resize: none;
+  height: 8rem; /* 80px */
+}
+
+/* Confirm button */
+.confirm-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border: none;
+  padding: 1.5rem; /* 15px */
+  border-radius: 0.8rem; /* 8px */
+  color: white;
+  font-size: 2rem; /* 20px */
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.confirm-btn:hover {
+  background: linear-gradient(45deg, #fc5c7d, #6a82fb);
+}
+
+/* Checkout summary */
+.checkout-summary {
+  max-width: 45rem; /* 450px */
+  font-size: 1.8rem; /* 18px */
+}
+
+/* Individual order item */
+.order-item {
+  display: flex;
+  flex-direction: row-reverse; /* image on right */
+  align-items: flex-start;
+  background: #1e1e1e;
+  border-radius: 1.2rem; /* 12px */
+  padding: 1.2rem; /* 12px */
+  margin-bottom: 1.5rem; /* 15px */
+  gap: 1.5rem; /* 15px gap */
+}
+
+.order-item img {
+  width: 10rem; /* 100px */
+  height: auto;
+  border-radius: 0.8rem; /* 8px */
+}
+
+/* Item info */
+.item-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem; /* 8px */
+}
+
+.product-name {
+  font-size: 1.8rem; /* 18px */
+  font-weight: bold;
+  color: #fff;
+}
+
+.item-price {
+  font-weight: bold;
+  font-size: 1.8rem; /* 18px */
+  color: #ffd700;
+}
+
+/* Quantity controls */
+.item-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* 5px */
+}
+
+.qty-btn {
+  padding: 0.5rem 1rem; /* 5px/10px */
+  font-size: 1.6rem; /* 16px */
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  background: #ffd700;
+  border-radius: 0.4rem; /* 4px */
+}
+
+.qty {
+  width: 4.5rem; /* 45px */
+  text-align: center;
+  border: 0.1rem solid #ccc; /* 1px */
+  border-radius: 0.4rem; /* 4px */
+  background: #fff;
+  font-size: 1.6rem; /* 16px */
+}
+
+/* Remove item button */
+.remove-item {
+  padding: 0.5rem 1rem; /* 5px/10px */
+  font-size: 1.4rem; /* 14px */
+  border: none;
+  cursor: pointer;
+  background: #ff4d4d;
+  color: #fff;
+  border-radius: 0.4rem; /* 4px */
+}
+
+/* Checkout actions buttons */
+.checkout-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem; /* 10px */
+  margin-top: 3rem; /* 30px */
+  margin-bottom: 3rem; /* 30px */
+}
+
+.btn {
+  padding: 1.2rem 1.8rem; /* 12px/18px */
+  font-size: 1.6rem; /* 16px */
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.8rem; /* 8px */
+  transition: background 0.3s ease;
+}
+
+.btn-secondary {
+  background-color: #444;
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  background-color: #666;
+}
+
+.btn-primary {
+  background-color: #ffd700;
+  color: #000;
+}
+
+.btn-primary:hover {
+  background-color: #e6c200;
+}
+
+/* Toast notifications */
+.toast {
+  font-size: 2rem; /* 20px */
+  position: fixed;
+  bottom: 2rem; /* 20px */
+  right: 2rem; /* 20px */
+  padding: 1.5rem; /* 15px */
+  border-radius: 0.6rem; /* 6px */
+  color: #fff;
+  font-weight: bold;
+  opacity: 0;
+  transform: translateY(2rem); /* 20px */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 9999;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.toast.success {
+  background-color: #28a745;
+}
+
+.toast.error {
+  background-color: #dc3545;
+}
+
+.toast.info {
+  background-color: #007bff;
+}
+
+/* Order total */
+.order-total {
+  padding-top: 3rem; /* 30px */
+  border-top: 0.2rem solid rgba(255, 255, 255, 0.2); /* 2px */
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 2rem; /* 20px */
+}

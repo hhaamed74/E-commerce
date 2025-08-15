@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>إتمام الشراء</title>
+
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="./assets/images/shopping.png"
+      type="image/x-icon"
+    />
+
+    <!-- Google Fonts Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/checkout.css" />
+  </head>
+
+  <body>
+    <!-- Toast Notifications -->
+    <div id="toast" class="toast"></div>
+
+    <!-- Checkout Container -->
+    <div class="checkout-container">
+      <!-- Checkout Form -->
+      <div class="checkout-form">
+        <h2>بيانات الشحن</h2>
+        <form id="checkoutForm">
+          <label for="name">الاسم الكامل</label>
+          <input
+            id="name"
+            type="text"
+            placeholder="اكتب اسمك الثلاثي"
+            required
+          />
+
+          <label for="email">البريد الإلكتروني</label>
+          <input
+            id="email"
+            type="email"
+            placeholder="example@mail.com"
+            required
+          />
+
+          <label for="phone">رقم الهاتف</label>
+          <input
+            id="phone"
+            type="tel"
+            placeholder="مثال: 01012345678"
+            required
+          />
+
+          <label for="address">عنوان الشحن</label>
+          <textarea
+            id="address"
+            placeholder="اكتب عنوانك بالكامل"
+            required
+          ></textarea>
+
+          <label for="city">المحافظة</label>
+          <select id="city" required>
+            <option value="">-- اختر المحافظة --</option>
+            <option value="cairo">القاهرة</option>
+            <option value="giza">الجيزة</option>
+            <option value="alex">الإسكندرية</option>
+            <option value="other">محافظة أخرى</option>
+          </select>
+
+          <label for="payment">طريقة الدفع</label>
+          <select id="payment" required>
+            <option value="cash">الدفع عند الاستلام</option>
+            <option value="card">بطاقة ائتمان</option>
+          </select>
+
+          <!-- Shipping Cost Display -->
+          <div
+            id="shippingCost"
+            style="margin: 10px 0; font-weight: bold; font-size: 1.5rem"
+          ></div>
+
+          <!-- Confirm Order Button -->
+          <button type="submit" class="confirm-btn">تأكيد الطلب</button>
+        </form>
+      </div>
+
+      <!-- Checkout Summary -->
+      <div class="checkout-summary">
+        <h2>ملخص الطلب</h2>
+
+        <!-- Order Items -->
+        <div id="orderItems">
+          <!-- Products will be added here via JS -->
+        </div>
+
+        <!-- Checkout Actions -->
+        <div class="checkout-actions">
+          <a href="/products.html">
+            <button id="continue-shopping" class="btn btn-secondary">
+              ⬅ الرجوع للتسوق
+            </button>
+          </a>
+        </div>
+
+        <!-- Order Total -->
+        <div class="order-total">
+          <span class="total">الإجمالي:</span>
+          <strong id="totalPrice">0 جنيه</strong>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/cart.js"></script>
+    <script src="assets/js/checkout.js"></script>
+  </body>
+</html>

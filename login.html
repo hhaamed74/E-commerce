@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>تسجيل دخول</title>
+
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="assets/images/login.png"
+      type="image/x-icon"
+    />
+
+    <!-- Google Fonts Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/auth.css" />
+  </head>
+
+  <body>
+    <!-- Toast Notifications -->
+    <div id="toast" class="toast"></div>
+
+    <!-- Authentication Container -->
+    <div class="auth-container">
+      <h2>تسجيل الدخول</h2>
+
+      <!-- Login Form -->
+      <form id="loginForm">
+        <label for="email">الإيميل:</label>
+        <input type="email" id="email" required />
+
+        <label for="password">كلمة المرور:</label>
+        <input type="password" id="password" required />
+
+        <button type="submit">دخول</button>
+      </form>
+
+      <!-- Registration Link -->
+      <p>مش مسجل؟ <a href="register.html">إنشاء حساب</a></p>
+    </div>
+
+    <!-- JavaScript File -->
+    <script src="assets/js/auth.js"></script>
+  </body>
+</html>

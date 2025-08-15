@@ -1,0 +1,123 @@
+/* Body and background */
+body {
+  background: linear-gradient(
+    135deg,
+    #667eea,
+    #764ba2
+  ); /* gradient background */
+  min-height: 100vh; /* full viewport height */
+  color: #fff; /* default text color */
+}
+
+/* Orders container grid */
+.orders-container {
+  padding: 0 3rem; /* 30px horizontal padding */
+  margin-top: 6rem; /* 60px top margin */
+  margin-bottom: 6rem; /* 60px bottom margin */
+  display: grid; /* grid layout */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(35rem, 1fr)
+  ); /* min 350px per card */
+  gap: 3rem; /* 30px gap between cards */
+}
+
+/* Individual order card */
+.order-card {
+  background: rgba(255, 255, 255, 0.97); /* almost white card */
+  border-radius: 2rem; /* 20px rounded corners */
+  padding: 2.5rem; /* 25px padding */
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2); /* 10px/30px shadow */
+  transition: transform 0.3s, box-shadow 0.3s; /* smooth hover effects */
+}
+
+.order-card:hover {
+  box-shadow: 0 1.5rem 3.5rem rgba(0, 0, 0, 0.25); /* deeper shadow on hover */
+}
+
+/* Order header (title + button) */
+.order-header {
+  display: flex; /* flex layout */
+  justify-content: space-between; /* space between title & button */
+  align-items: center; /* vertical alignment */
+  margin-bottom: 2rem; /* 20px bottom margin */
+}
+
+.order-header strong {
+  color: #00c8ff; /* highlight color */
+  font-size: 1.8rem; /* 18px font size */
+}
+
+/* Download button */
+button.download-btn {
+  background: #00c8ff; /* button color */
+  color: #fff;
+  border: none;
+  padding: 1rem 2rem; /* 10px top/bottom, 20px left/right */
+  border-radius: 0.8rem; /* 8px */
+  cursor: pointer;
+  font-size: 1.6rem; /* 16px */
+  transition: background 0.3s;
+}
+
+button.download-btn:hover {
+  background: #009bbd; /* darker on hover */
+}
+
+/* Order details section */
+.order-details p {
+  margin: 1rem 0; /* 10px top/bottom */
+  font-size: 1.5rem; /* 15px */
+  display: flex;
+  align-items: center;
+  gap: 0.8rem; /* 8px gap between label and value */
+  color: #333;
+}
+
+.order-details strong {
+  min-width: 16rem; /* 160px min width */
+  color: #764ba2;
+}
+
+.order-details span {
+  font-weight: 500;
+}
+
+.price {
+  color: #00c8ff;
+  font-weight: bold;
+}
+
+/* Order items list */
+.order-items {
+  border-top: 0.2rem solid #c3c3c3; /* 2px top border */
+  margin-top: 2rem; /* 20px */
+  padding-top: 2rem; /* 20px top padding */
+}
+
+.order-items strong {
+  display: block;
+  margin-bottom: 0.8rem; /* 8px bottom margin */
+  font-size: 1.6rem; /* 16px */
+  color: #764ba2;
+}
+
+/* Individual item in order */
+.order-item {
+  padding: 1rem 1.4rem; /* 10px top/bottom, 14px left/right */
+  border-radius: 0.8rem; /* 8px */
+  margin-bottom: 0.6rem; /* 6px spacing */
+  font-size: 1.6rem; /* 16px */
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+}
+
+/* No orders message */
+.no-orders {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.85); /* semi-transparent white */
+  font-size: 2rem; /* 20px */
+  margin-top: 6rem; /* 60px */
+}

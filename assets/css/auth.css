@@ -1,0 +1,134 @@
+/* Body setup for center alignment */
+body {
+  display: flex;
+  align-items: center; /* vertical center */
+  justify-content: center; /* horizontal center */
+}
+
+/* Auth container */
+.auth-container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(1rem); /* 10px blur */
+  padding: 2.5rem 3rem; /* 25px / 30px */
+  border-radius: 1.5rem; /* 15px */
+  width: 100%;
+  max-width: 40rem; /* 400px */
+  box-shadow: 0 0.8rem 3.2rem rgba(0, 0, 0, 0.3); /* 8px / 32px */
+  text-align: center;
+}
+
+/* Heading */
+.auth-container h2 {
+  margin-bottom: 2rem; /* 20px */
+  font-weight: 700;
+  font-size: 1.8rem; /* 18px */
+  letter-spacing: 0.1rem; /* 1px */
+}
+
+/* Form setup */
+.auth-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem; /* 12.5px */
+}
+
+/* Labels */
+.auth-container label {
+  text-align: left;
+  font-weight: 600;
+  font-size: 1.6rem; /* 16px */
+  color: #e0e0e0;
+}
+
+/* Input fields */
+.auth-container input {
+  padding: 0.75rem 1rem; /* 7.5px / 10px */
+  border-radius: 1rem; /* 10px */
+  border: none;
+  outline: none;
+  font-size: 1.5rem; /* 15px */
+  transition: box-shadow 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+.auth-container input::placeholder {
+  color: #d6d6d6;
+}
+
+.auth-container input:focus {
+  box-shadow: 0 0 0.8rem 0.2rem #a18cd1; /* 8px / 2px */
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+/* Button */
+.auth-container button {
+  padding: 0.85rem 1rem; /* 8.5px / 10px */
+  background: linear-gradient(45deg, #6a82fb, #fc5c7d);
+  border: none;
+  border-radius: 1.2rem; /* 12px */
+  font-weight: 700;
+  font-size: 1.5rem; /* 15px */
+  color: white;
+  cursor: pointer;
+  transition: background 0.4s ease;
+  box-shadow: 0 0.4rem 1.5rem rgba(252, 92, 125, 0.5); /* 4px / 15px */
+}
+
+.auth-container button:hover {
+  background: linear-gradient(45deg, #fc5c7d, #6a82fb);
+  box-shadow: 0 0.6rem 2rem rgba(106, 130, 251, 0.7); /* 6px / 20px */
+}
+
+/* Paragraph & links */
+.auth-container p {
+  margin-top: 1.25rem; /* 12.5px */
+  font-size: 1.52rem; /* 15.2px */
+  color: #d0cde1;
+}
+
+.auth-container p a {
+  color: #ffd700;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.auth-container p a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Responsive for mobile */
+@media (max-width: 45rem) {
+  /* 450px */
+  .auth-container {
+    padding: 2rem 1.5rem; /* 20px / 15px */
+  }
+}
+
+/* Toast notifications */
+.toast {
+  position: fixed;
+  bottom: 3rem; /* 30px */
+  right: 3rem; /* 30px */
+  background-color: #fc5c7d;
+  color: white;
+  padding: 2rem 3rem; /* 20px / 30px */
+  border-radius: 0.8rem; /* 8px */
+  box-shadow: 0 0.5rem 1.5rem rgba(252, 92, 125, 0.6); /* 5px / 15px */
+  font-weight: bold;
+  font-size: 2rem; /* 20px */
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(2rem); /* 20px */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 9999;
+  max-width: 30rem; /* 300px */
+}
+
+.toast.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}

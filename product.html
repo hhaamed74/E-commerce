@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>تفاصيل المنتج</title>
+
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="assets/images/products.png"
+      type="image/x-icon"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/product.css" />
+  </head>
+
+  <body>
+    <!-- Header Section -->
+    <header class="header">
+      <div class="container header-container">
+        <!-- Logo -->
+        <a href="./index.html">
+          <div class="logo">ميم</div>
+        </a>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="menu-toggle" aria-label="Navigation Menu">
+          <i class="fa fa-bars"></i>
+        </button>
+
+        <!-- Navigation Links -->
+        <nav class="nav">
+          <ul id="nav-links">
+            <!-- Dynamic links will appear here -->
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Product Details Section -->
+    <main id="product-details" class="product-details">
+      <div class="container">
+        <div class="product-card">
+          <!-- Product Image -->
+          <img id="product-image" src="" alt="" />
+
+          <!-- Product Information -->
+          <div class="product-info">
+            <h1 id="product-name"></h1>
+            <p id="product-description"></p>
+            <p id="product-details-text"></p>
+
+            <!-- Product Category -->
+            <p id="product-category"></p>
+
+            <!-- Product Stock -->
+            <p id="product-stock"></p>
+
+            <!-- Rating Box -->
+            <div class="rating-box">
+              <span>التقييم: <span id="product-rating-number"></span></span>
+              <div id="product-rating-stars" class="stars"></div>
+            </div>
+
+            <!-- Product Price -->
+            <h3 id="product-price"></h3>
+
+            <!-- Add to Cart Button -->
+            <button id="add-to-cart">إضافة إلى السلة</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- JavaScript Files -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/products.js"></script>
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/product.js"></script>
+  </body>
+</html>

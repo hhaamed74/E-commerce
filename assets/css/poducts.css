@@ -1,0 +1,114 @@
+/* Products section */
+.products-section {
+  padding: 2rem; /* 20px padding */
+}
+
+/* Controls above products (search + sort) */
+.products-controls {
+  display: flex; /* flex layout */
+  gap: 2rem; /* 20px gap between controls */
+  margin-bottom: 3rem; /* 30px bottom margin */
+  justify-content: flex-start; /* align left */
+}
+
+/* Individual product card */
+.product-card {
+  max-width: 30rem; /* 300px max width */
+  margin: 0 auto; /* center horizontally */
+}
+
+/* Search input */
+#search-input {
+  flex-grow: 1; /* take remaining space */
+  padding: 1rem 1.5rem; /* 10px top/bottom, 15px left/right */
+  font-size: 1.5rem; /* 15px */
+  border-radius: 0.6rem; /* 6px */
+  border: 0.1rem solid #ddd; /* 1px */
+}
+
+/* Sort dropdown */
+#sort-select {
+  padding: 1rem; /* 10px */
+  font-size: 1.5rem; /* 15px */
+  border-radius: 0.6rem; /* 6px */
+  border: 0.1rem solid #ddd; /* 1px */
+  cursor: pointer; /* pointer on hover */
+}
+
+/* Products grid */
+.products-grid {
+  display: grid; /* grid layout */
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); /* 250px min */
+  gap: 1.5rem; /* 15px gap between cards */
+}
+
+/* Product actions (quantity + add to cart) */
+.product-actions {
+  display: flex;
+  align-items: center; /* vertical center */
+  gap: 0.7rem; /* 7px gap */
+  margin-top: 1rem; /* 10px top margin */
+}
+
+/* Links inside product info */
+.product-info a {
+  text-decoration: none; /* remove underline */
+  color: #333;
+}
+
+/* Quantity buttons (+/-) */
+.qty-btn {
+  background-color: #fc5c7d;
+  border: none;
+  color: white;
+  font-weight: 700;
+  font-size: 1.2rem; /* 12px */
+  width: 3.2rem; /* 32px */
+  height: 3.2rem; /* 32px */
+  border-radius: 0.6rem; /* 6px */
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for quantity buttons */
+.qty-btn:hover {
+  background-color: #ff416c;
+}
+
+/* Quantity display input */
+.quantity {
+  width: 5rem; /* 50px */
+  text-align: center;
+  border: 0.1rem solid #ddd; /* 1px */
+  border-radius: 0.6rem; /* 6px */
+  font-size: 1rem; /* 10px */
+  padding: 0.5rem 0; /* 5px top/bottom */
+  pointer-events: none; /* prevent manual input */
+  user-select: none;
+  background-color: #fafafa;
+  color: #333;
+}
+
+/* Add to cart button */
+.add-cart-btn {
+  background: #fc5c7d;
+  border: none;
+  padding: 0.6rem 1.3rem; /* 6px top/bottom, 13px left/right */
+  color: white;
+  font-weight: 700;
+  border-radius: 0.6rem; /* 6px */
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-size: 1.2rem; /* 12px */
+}
+
+/* Hover effect for add-cart button */
+.add-cart-btn:hover {
+  background: #ff416c;
+}
+
+/* Product rating stars */
+.rating {
+  font-size: 2rem; /* 20px */
+}

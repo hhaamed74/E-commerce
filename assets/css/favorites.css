@@ -1,0 +1,193 @@
+/* Products grid section */
+.products-grid {
+  display: grid; /* enable grid layout */
+  grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+  gap: 1.5rem; /* 15px gap between cards */
+  padding: 1rem; /* 10px padding */
+  justify-content: center; /* center the grid */
+  max-width: 120rem; /* 1200px max width */
+  margin: 0 auto; /* center grid horizontally */
+}
+
+/* Responsive adjustments */
+@media (max-width: 120rem) {
+  /* 1200px */
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  }
+}
+
+@media (max-width: 90rem) {
+  /* 900px */
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+  }
+}
+
+@media (max-width: 60rem) {
+  /* 600px */
+  .products-grid {
+    grid-template-columns: 1fr; /* 1 card per row */
+  }
+}
+
+/* Individual product card */
+.product-card {
+  background: #fff;
+  border-radius: 1.2rem; /* 12px */
+  box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.1); /* 6px/15px */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  max-width: 26rem; /* 260px */
+  margin: 0 auto; /* center card */
+}
+
+.product-card:hover {
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2); /* deeper shadow */
+}
+
+/* Product image wrapper */
+.product-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 22rem; /* 220px */
+  overflow: hidden;
+}
+
+.product-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* maintain aspect ratio */
+  display: block;
+}
+
+/* Favorite button */
+.favorite-btn {
+  position: absolute;
+  top: 1rem; /* 10px */
+  left: 1rem; /* 10px */
+  background: rgba(252, 92, 125, 0.85);
+  border: none;
+  color: #fff;
+  font-size: 1.5rem; /* 15px */
+  padding: 0.8rem 1rem; /* 8px/10px */
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.3s;
+}
+
+.favorite-btn:hover {
+  background: #ff416c;
+}
+
+.favorite-btn.active i {
+  color: #ffd700; /* gold color */
+  animation: heartbeat 0.6s ease;
+}
+
+@keyframes heartbeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+}
+
+/* Product information */
+.product-info {
+  padding: 1.5rem 1rem; /* 15px top/bottom, 10px left/right */
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem; /* 4px spacing between elements */
+}
+
+.product-info a {
+  text-decoration: none;
+  color: #333;
+}
+
+.product-info h3 {
+  font-size: 2rem; /* 20px */
+  margin: 0;
+  color: #333;
+}
+
+.product-info p {
+  font-size: 1.5rem; /* 15px */
+  color: #555;
+  flex-grow: 1;
+}
+
+.product-info .price {
+  font-size: 1.8rem; /* 18px */
+  font-weight: bold;
+  color: #fc5c7d;
+}
+
+.rating {
+  color: #fc5c7d;
+  font-size: 1.8rem; /* 18px */
+}
+
+/* Product actions (quantity + add to cart) */
+.product-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem; /* 4px */
+  margin-top: 0.5rem; /* 5px */
+}
+
+.product-actions .qty-btn {
+  background-color: #fc5c7d;
+  border: none;
+  color: white;
+  font-weight: 700;
+  font-size: 1.2rem; /* 12px */
+  width: 3.2rem; /* 32px */
+  height: 3.2rem; /* 32px */
+  border-radius: 0.6rem; /* 6px */
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+.product-actions .qty-btn:hover {
+  background-color: #ff416c;
+}
+
+.product-actions .quantity {
+  width: 4rem; /* 40px */
+  text-align: center;
+  border: 0.1rem solid #ccc; /* 1px */
+  border-radius: 0.4rem; /* 4px */
+  padding: 0.2rem 0; /* 2px top/bottom */
+  font-size: 1rem; /* 10px */
+}
+
+.product-actions .add-cart-btn {
+  background: #fc5c7d;
+  border: none;
+  padding: 0.6rem 1.3rem; /* 6px/13px */
+  color: white;
+  font-weight: 700;
+  border-radius: 0.6rem; /* 6px */
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-size: 1.2rem; /* 12px */
+}
+
+.product-actions .add-cart-btn:hover {
+  background: #ff416c;
+}
+
+/* Centered text (like "No products found") */
+.text__center {
+  font-size: 3rem; /* 30px */
+  text-align: center;
+}

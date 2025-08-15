@@ -1,0 +1,26 @@
+{
+  "name": "mem",
+  "version": "1.0.0",
+  "description": "A modern and responsive E-Commerce website with product search, filtering, favorites, cart, checkout, user authentication, and order management.",
+  "author": "Hamed Abdul Mohsen Al Sayed",
+  "keywords": [
+    "e-commerce",
+    "shopping",
+    "cart",
+    "checkout",
+    "favorites",
+    "products",
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "responsive",
+    "web"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server"
+  },
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}
