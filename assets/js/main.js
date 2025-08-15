@@ -70,7 +70,6 @@ function addToCart(productId, quantity) {
 // Header & Navigation Management
 // ================================
 
-// Update header links depending on login status
 function updateHeaderLinks() {
   const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
   const nav = document.querySelector(".nav ul");
@@ -83,7 +82,7 @@ function updateHeaderLinks() {
       <li><a href="index.html" class="active">الرئيسية</a></li>
       <li><a href="products.html">المنتجات</a></li>
       <li><a href="favorites.html">المفضلة</a></li>
-      <li><a href="/orders.html">سجل الطلبات</a></li>
+      <li><a href="orders.html">سجل الطلبات</a></li>
       <li>
         <a href="cart.html">
           <i class="fa fa-shopping-cart"></i> سلة التسوق
@@ -98,7 +97,6 @@ function updateHeaderLinks() {
       </li>
     `;
 
-    // Logout functionality
     document.getElementById("logout-link").addEventListener("click", (e) => {
       e.preventDefault();
       localStorage.removeItem("loggedInUser");
@@ -135,7 +133,6 @@ if (menuToggle) {
   });
 }
 
-// Mobile dropdown handling
 document.addEventListener("click", (e) => {
   if (e.target.closest(".dropbtn")) {
     e.preventDefault();
@@ -149,10 +146,28 @@ document.addEventListener("click", (e) => {
 });
 
 // ================================
+// Page Protection (Optional)
+// ================================
+
+function protectPages() {
+  const protectedPages = ["cart.html", "favorites.html", "orders.html"];
+  const currentPage = window.location.pathname.split("/").pop();
+  const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+
+  if (protectedPages.includes(currentPage) && !loggedInUser) {
+    showToast("يجب تسجيل الدخول أولاً");
+    setTimeout(() => {
+      window.location.href = "login.html";
+    }, 2000);
+  }
+}
+
+// ================================
 // Initialize on page load
 // ================================
 
 window.addEventListener("DOMContentLoaded", () => {
   updateHeaderLinks();
   updateCartCount();
+  protectPages(); // حماية الصفحات المحمية
 });
